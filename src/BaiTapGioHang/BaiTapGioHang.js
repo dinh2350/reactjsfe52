@@ -68,7 +68,7 @@ export default class BaiTapGioHang extends Component {
   renderDanhSachSanPham = () => {
     return this.danhSachSanPham.map((sanPham, index) => {
       return (
-        <div className="col-sm-4">
+        <div className="col-sm-4" key={index}>
           <SanPham sanPham={sanPham} />
         </div>
       );
