@@ -72,6 +72,12 @@ export default class BaiTapGioHang extends Component {
 
   handleDelete = (cart) => {
     let danhSachGioHang = this.state.danhSachGioHang;
+    /**
+     * filter lộc mãng theo điều kiện của mình:
+     *    duyệt qua từng phần tử mãng nếu điều kiện trả về là :
+     *      true -> thì thêm vào mãng mới
+     *      false -> thì loại khoải mãng mới
+     */
     danhSachGioHang = danhSachGioHang.filter((item) => {
       return cart.maSanPham !== item.maSanPham;
     });
@@ -81,7 +87,7 @@ export default class BaiTapGioHang extends Component {
   handleAddSP = (sanPhan) => {
     let danhSachGioHang = [...this.state.danhSachGioHang];
     /**
-     * findIndex tìm xem có tồn tại trong mãng hay không :
+     * findIndex tìm xem phần tử có tồn tại trong mãng hay không :
      *  nếu có tồn tại trả về index
      *  nếu ko tồn tại trả về -1
      */
