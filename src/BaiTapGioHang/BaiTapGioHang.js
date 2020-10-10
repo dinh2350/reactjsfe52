@@ -5,8 +5,8 @@
  * 3. lấy data trong state đi binding ra jsx - done
  * 4. render mãng dử liệu - done
  * 5. xây dựng chức năng xem chi tiết - done
- * 6. xây dựng chức năng thêm giỏ hàng
- * 7. xây dựng chức năng xóa sp khoải giỏ hàng
+ * 6. xây dựng chức năng thêm giỏ hàng - done
+ * 7. xây dựng chức năng xóa sp khoải giỏ hàng - done
  * 8. xây dựng chức năng tăng giảm số lượng
  * 9. xây dựng chức năng hiển thị tông số sản phẩm
  */
