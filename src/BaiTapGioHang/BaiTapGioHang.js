@@ -12,11 +12,13 @@
  */
 
 import React, { Component } from "react";
+import Modal from "./Modal";
 import SanPham from "./SanPham";
 
 export default class BaiTapGioHang extends Component {
   danhSachSanPham = [
     {
+      giaBan: 170000000,
       maSanPham: "1",
       tenSanPham: "VS Phone",
       hinhAnh: "./img/vsphone.jpg",
@@ -28,6 +30,7 @@ export default class BaiTapGioHang extends Component {
       rom: "6 GB",
     },
     {
+      giaBan: 150000000,
       maSanPham: "2",
       tenSanPham: "Meizu phone",
       hinhAnh: "./img/meizuphone.jpg",
@@ -39,6 +42,7 @@ export default class BaiTapGioHang extends Component {
       rom: "16 GB",
     },
     {
+      giaBan: 120000000,
       maSanPham: "3",
       tenSanPham: "Apple phone",
       hinhAnh: "./img/applephone.jpg",
@@ -121,77 +125,7 @@ export default class BaiTapGioHang extends Component {
             <div className="container">
               <div className="row">{this.renderDanhSachSanPham()}</div>
             </div>
-            <div
-              className="modal fade"
-              id="modelId"
-              tabIndex={-1}
-              aria-labelledby="modelTitleId"
-              aria-hidden="true"
-              style={{ display: "none" }}
-            >
-              <div
-                className="modal-dialog"
-                role="document"
-                style={{ maxWidth: 1000 }}
-              >
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h5 className="modal-title">Giỏ hàng</h5>
-                    <button
-                      type="button"
-                      className="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
-                  <div className="modal-body">
-                    <table className="table">
-                      <thead>
-                        <tr>
-                          <th>Mã sản phẩm</th>
-                          <th>tên sản phẩm</th>
-                          <th>hình ảnh</th>
-                          <th>số lượng</th>
-                          <th>đơn giá</th>
-                          <th>thành tiền</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Iphone XS Max</td>
-                          <td>
-                            <img src="./img/applephone.jpg" width={50} alt />
-                          </td>
-                          <td>
-                            <button>-</button>5<button>+</button>
-                          </td>
-                          <td>27000000</td>
-                          <td>135000000</td>
-                          <td>
-                            <button className="btn btn-danger">Delete</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="modal-footer">
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" className="btn btn-primary">
-                      Save
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Modal danhSachGioHang={this.state.danhSachGioHang} />
             <div className="row">
               <div className="col-sm-5">
                 <img
