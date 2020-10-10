@@ -1,6 +1,9 @@
 import React from "react";
+import BaiTapGioHang from "./BaiTapGioHang/BaiTapGioHang";
 // import DemoConditionalAndState from "./DemoLogin/DemoConditionalAndState";
-import BaiTapChonMauXe from "./BaiTapChonMauXe";
+// import BaiTapChonMauXe from "./BaiTapChonMauXe";
+// import DemoCourse from "./ListAndKeys/DemoCourse";
+// import DemoProps from "./Props/DemoProps";
 // import ClassEvents from "./HandleEvents/ClassEvents";
 // import logo from "./logo.svg";
 // import "./App.css";
@@ -19,7 +22,10 @@ function App() {
       {/* <FunctionEvent /> */}
       {/* <ClassEvents /> */}
       {/* <DemoConditionalAndState /> */}
-      <BaiTapChonMauXe />
+      {/* <BaiTapChonMauXe /> */}
+      {/* <DemoCourse /> */}
+      {/* <DemoProps /> */}
+      <BaiTapGioHang />
     </div>
   );
 }

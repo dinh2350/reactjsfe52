@@ -2,12 +2,13 @@ import React, { Component } from "react";
 
 export default class Product extends Component {
   render() {
+    console.log(this.props);
     return (
       <div className="container">
         <div className="card bg-light" style={{ width: 300 }}>
           <img
             className="card-img-top"
-            src="./img/sp_note7.png"
+            src={this.props.sanPham.hinhAnh}
             alt="Card image"
             style={{ maxWidth: "100%", height: 250 }}
           />
