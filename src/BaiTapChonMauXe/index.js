@@ -39,6 +39,7 @@ export default class BaiTapChonMauXe extends Component {
                 <img
                   src="./img/car/icons/icon-black.jpg"
                   alt="hinh"
+                  // style="color : black"
                   style={{ width: 50 }}
                 />
               </button>
