@@ -5,7 +5,7 @@ class CartItem extends Component {
     return (
       <tr>
         <td>{this.props.cart.maSanPham}</td>
-        <td>{this.props.tenSanPham}</td>
+        <td>{this.props.cart.tenSanPham}</td>
         <td>
           <img src={this.props.cart.hinhAnh} width={50} alt />
         </td>
