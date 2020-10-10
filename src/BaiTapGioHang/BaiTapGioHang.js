@@ -3,8 +3,8 @@
  * 1. dàn layout ( html css ) - done
  * 2. xác định data thay đổi và lưu vào state - done
  * 3. lấy data trong state đi binding ra jsx - done
- * 4. render mãng dử liệu
- * 5. xây dựng chức năng xem chi tiết
+ * 4. render mãng dử liệu - done
+ * 5. xây dựng chức năng xem chi tiết - done
  * 6. xây dựng chức năng thêm giỏ hàng
  * 7. xây dựng chức năng xóa sp khoải giỏ hàng
  * 8. xây dựng chức năng tăng giảm số lượng
@@ -63,13 +63,41 @@ export default class BaiTapGioHang extends Component {
       ram: "4 GB",
       rom: "6 GB",
     },
+    danhSachGioHang: [],
+  };
+
+  handleAddSP = (sanPhan) => {
+    let danhSachGioHang = [...this.state.danhSachGioHang];
+    // danhSachGioHang.push(sanPhan);
+    danhSachGioHang = [...danhSachGioHang, sanPhan];
+    // setState
+    this.setState(
+      {
+        danhSachGioHang: danhSachGioHang,
+      },
+      () => {
+        console.log(this.state.danhSachGioHang);
+      }
+    );
+  };
+
+  handleDetail = (sanPham) => {
+    console.log("run handleDetail");
+    // setState
+    this.setState({
+      sanPhamChiTiet: sanPham,
+    });
   };
 
   renderDanhSachSanPham = () => {
     return this.danhSachSanPham.map((sanPham, index) => {
       return (
         <div className="col-sm-4" key={index}>
-          <SanPham sanPham={sanPham} />
+          <SanPham
+            handleDetail={this.handleDetail}
+            handleAddSP={this.handleAddSP}
+            sanPham={sanPham}
+          />
         </div>
       );
     });
