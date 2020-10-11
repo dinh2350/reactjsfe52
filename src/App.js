@@ -1,5 +1,5 @@
 import React from "react";
-import BaiTapGioHang from "./BaiTapGioHang/BaiTapGioHang";
+import BaiTapGioHangRedux from "./BaiTapGioHangRedux/BaiTapGioHang";
 // import DemoConditionalAndState from "./DemoLogin/DemoConditionalAndState";
 // import BaiTapChonMauXe from "./BaiTapChonMauXe";
 // import DemoCourse from "./ListAndKeys/DemoCourse";
@@ -25,7 +25,7 @@ function App() {
       {/* <BaiTapChonMauXe /> */}
       {/* <DemoCourse /> */}
       {/* <DemoProps /> */}
-      <BaiTapGioHang />
+      <BaiTapGioHangRedux />
     </div>
   );
 }
