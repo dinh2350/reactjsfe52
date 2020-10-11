@@ -71,8 +71,31 @@ export default class BaiTapGioHang extends Component {
   };
 
   handleTangGiam = (cart, status) => {
-    console.log(cart, status);
-    // setState
+    /**
+     * các bước thực hiện
+     * 1. lấy mãng giỏ hàng
+     * 2. tìm vị trị của phần tử được nhấn
+     * 3. check xem là tăng hay giảm ( status )
+     * 4. cập nhật lại state
+     */
+    // let danhSachGioHang = this.state.danhSachGioHang;
+    // let sanPhamChiTiet = this.state.sanPhamChiTiet;
+    let { danhSachGioHang, sanPhamChiTiet } = this.state;
+    const index = danhSachGioHang.findIndex((item) => {
+      return item.maSanPham === cart.maSanPham;
+    });
+    if (index !== -1) {
+      if (status) {
+        // tăng
+        danhSachGioHang[index].soLuong += 1;
+      } else {
+        // giảm
+        danhSachGioHang[index].soLuong -= 1;
+      }
+    }
+    this.setState({
+      danhSachGioHang,
+    });
   };
 
   handleDelete = (cart) => {
