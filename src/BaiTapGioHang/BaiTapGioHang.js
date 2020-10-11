@@ -70,6 +70,11 @@ export default class BaiTapGioHang extends Component {
     danhSachGioHang: [],
   };
 
+  handleTangGiam = (cart, status) => {
+    console.log(cart, status);
+    // setState
+  };
+
   handleDelete = (cart) => {
     let danhSachGioHang = this.state.danhSachGioHang;
     danhSachGioHang = danhSachGioHang.filter((item) => {
@@ -153,6 +158,7 @@ export default class BaiTapGioHang extends Component {
             </div>
             <Modal
               handleDelete={this.handleDelete}
+              handleTangGiam={this.handleTangGiam}
               danhSachGioHang={this.state.danhSachGioHang}
             />
             <div className="row">

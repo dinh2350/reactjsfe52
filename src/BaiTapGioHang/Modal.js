@@ -7,6 +7,7 @@ class Modal extends Component {
       return (
         <CartItem
           handleDelete={this.props.handleDelete}
+          handleTangGiam={this.props.handleTangGiam}
           cart={cart}
           key={index}
         />

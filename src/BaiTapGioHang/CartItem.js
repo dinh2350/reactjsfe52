@@ -10,9 +10,23 @@ class CartItem extends Component {
           <img src={this.props.cart.hinhAnh} width={50} alt />
         </td>
         <td>
-          <button>-</button>
+          <button
+            onClick={() => {
+              const cartDuocNhan = this.props.cart;
+              this.props.handleTangGiam(cartDuocNhan, false);
+            }}
+          >
+            -
+          </button>
           {this.props.cart.soLuong}
-          <button>+</button>
+          <button
+            onClick={() => {
+              const cartDuocNhan = this.props.cart;
+              this.props.handleTangGiam(cartDuocNhan, true);
+            }}
+          >
+            +
+          </button>
         </td>
         <td>{this.props.cart.giaBan}</td>
         <td>{this.props.cart.giaBan * this.props.cart.soLuong}</td>
